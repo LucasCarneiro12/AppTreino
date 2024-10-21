@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#3F51B5"
-    android:backgroundTint="#FFFFFF"
+    android:backgroundTint="#3F51B5"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -31,69 +31,48 @@
         app:layout_constraintGuide_percent="0.75" />
 
     <Button
-        android:id="@+id/btnHome"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#3F51B5"
-        android:backgroundTint="#FFEB3B"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/btnTreino"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3F51B5"
-        android:backgroundTint="#FFEB3B"
+        android:background="@drawable/custonmbtn"
         android:text="Treino"
+        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3" />
 
     <Button
-        android:id="@+id/btnInfo"
-        style="@style/Widget.AppCompat.Button"
+        android:id="@+id/btnHome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3F51B5"
-        android:backgroundTint="#FFEB3B"
+        android:background="@drawable/custonmbtn"
+        android:text="Home"
+        android:textColorLink="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custonmbtn"
         android:text="Info"
-        android:visibility="visible"
+        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
     <Button
         android:id="@+id/btnPerfil"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3F51B5"
-        android:backgroundTint="#FFEB3B"
+        android:background="@drawable/custonmbtn"
         android:onClick="abrirTelaCadastro"
         android:text="Perfil"
+        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7" />
-
-    <FrameLayout
-        android:id="@+id/frameConteudo"
-        android:layout_width="409dp"
-        android:layout_height="681dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

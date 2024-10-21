@@ -11,20 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.primeiroaplicativo.fragments.HomeFragment;
-import com.example.primeiroaplicativo.fragments.InfoFragment;
-import com.example.primeiroaplicativo.fragments.PerfilFragment;
-import com.example.primeiroaplicativo.fragments.TreinoFragment;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private Button btnHome, btnTreino, btnPerfil, btnInfo;
-    private HomeFragment homeFragment;
-    private TreinoFragment treinoFragmemnt;
-    private PerfilFragment perfilFragment;
-    private InfoFragment infoFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,63 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //menu de baixo
-     /*   btnHome = findViewById(R.id.btnHome);
-        btnTreino = findViewById(R.id.btnTreino);
-        btnInfo = findViewById(R.id.btnInfo);
-        btnPerfil = findViewById(R.id.btnPerfil);
-
-        //instaciar os fragments
-        homeFragment = new HomeFragment();
-
-
-        //configurar os fragmentos
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frameConteudo, homeFragment);
-        transaction.commit();
-
-        btnHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameConteudo, homeFragment);
-                transaction.commit();
-            }
-        });
-
-
-        btnTreino.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                treinoFragmemnt = new TreinoFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameConteudo, treinoFragmemnt);
-                transaction.commit();
-            }
-        });
-
-        btnPerfil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                perfilFragment = new PerfilFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameConteudo, perfilFragment);
-                transaction.commit();
-            }
-        });
-
-        btnInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                infoFragment = new InfoFragment();
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.frameConteudo, infoFragment);
-                transaction.commit();
-            }
-        });
-
-
-        */
 
 
 
