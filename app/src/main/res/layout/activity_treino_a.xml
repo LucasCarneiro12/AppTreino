@@ -32,11 +32,93 @@
 
     <ImageView
         android:id="@+id/gif_crucifixo"
-        android:layout_width="168dp"
-        android:layout_height="245dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
         app:srcCompat="@drawable/crucifixo_reto" />
+
+    <ImageView
+        android:id="@+id/gif_supinoinclinado"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_crucifixo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gif_crucifixo"
+        app:layout_constraintTop_toTopOf="@+id/gif_crucifixo"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/supinoinclinado" />
+
+    <ImageView
+        android:id="@+id/gif_supinomaquina"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gif_crucifixo"
+        app:srcCompat="@drawable/supinomaquina" />
+
+    <ImageView
+        android:id="@+id/gif_supinoreto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_supinomaquina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gif_supinomaquina"
+        app:layout_constraintTop_toTopOf="@+id/gif_supinomaquina"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/supino_reto" />
+
+    <ImageView
+        android:id="@+id/gif_elevacaolateral"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gif_supinomaquina"
+        app:srcCompat="@drawable/elevacaolateral" />
+
+    <ImageView
+        android:id="@+id/gif_desenvolvimentomaquina"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_elevacaolateral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/gif_elevacaolateral"
+        app:layout_constraintTop_toTopOf="@+id/gif_elevacaolateral"
+        app:srcCompat="@drawable/desenvolvimentomaquina" />
+
+    <ImageView
+        android:id="@+id/gif_tricepspuley"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gif_elevacaolateral"
+        app:srcCompat="@drawable/tricepspuley" />
+
+    <ImageView
+        android:id="@+id/gif_tricepsdip"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_tricepspuley"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gif_tricepspuley"
+        app:layout_constraintTop_toTopOf="@+id/gif_tricepspuley"
+        app:srcCompat="@drawable/tricepsdip" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
