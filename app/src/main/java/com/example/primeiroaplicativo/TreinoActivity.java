@@ -34,4 +34,33 @@ public class TreinoActivity extends AppCompatActivity {
         Intent it_telaHome = new Intent(this, MainActivity.class);
         startActivity(it_telaHome);}
 
+    public void abrirTelaPerfil(View view){
+        Intent it_telaHome = new Intent(this, CadastroActivity.class);
+        startActivity(it_telaHome);}
+
+    public void abrirTreinoAMasc(View view){
+        Intent it_telaHome = new Intent(this, TreinoA.class);
+        startActivity(it_telaHome);}
+
+    public void abrirTreinoBMasc(View view){
+        Intent it_telaHome = new Intent(this, TreinoB.class);
+        startActivity(it_telaHome);}
+
+    public void abrirTreinoCMasc(View view){
+        Intent it_telaHome = new Intent(this, TreinoC.class);
+        startActivity(it_telaHome);}
+
+    public void abrirTreinoAFem(View view){
+        Intent it_telaHome = new Intent(this, TreinoAfeminino.class);
+        startActivity(it_telaHome);}
+
+    public void abrirTreinoBFem(View view){
+        Intent it_telaHome = new Intent(this, TreinoBfeminino.class);
+        startActivity(it_telaHome);}
+
+    public void abrirTreinoCFem(View view){
+        Intent it_telaHome = new Intent(this, TreinoCfeminino.class);
+        startActivity(it_telaHome);}
+
+
 }

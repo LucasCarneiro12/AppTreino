@@ -13,6 +13,30 @@
         android:theme="@style/Theme.PrimeiroAplicativo"
         tools:targetApi="31">
         <activity
+            android:name=".TreinoCfeminino"
+            android:exported="false" />
+        <activity
+            android:name=".TreinoAfeminino"
+            android:exported="false" />
+        <activity
+            android:name=".TreinoA"
+            android:exported="false" />
+        <activity
+            android:name=".TreinoC"
+            android:exported="false" />
+        <activity
+            android:name=".TreinoB"
+            android:exported="false" />
+        <activity
+            android:name="treino_masculino.Treino_b_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_perfil$Treino_a_Activity"
+            android:exported="false" />
+        <activity
+            android:name="treino_masculino.treino_a"
+            android:exported="false" />
+        <activity
             android:name=".TreinoActivity"
             android:exported="false" />
         <activity
