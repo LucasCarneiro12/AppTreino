@@ -23,6 +23,7 @@ public class TreinoA extends AppCompatActivity {
         Glide.with(this).asGif().load(R.drawable.crucifixo_reto).into(crucifixo);
 
 
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
