@@ -1,6 +1,8 @@
 package com.example.primeiroaplicativo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
+import com.example.primeiroaplicativo.masctreino.TreinoCrucifixomasc;
 
 public class TreinoA extends AppCompatActivity {
 
@@ -57,4 +60,10 @@ public class TreinoA extends AppCompatActivity {
             return insets;
         });
     }
+
+
+    public void abrirIniciar(View view){
+        Intent it_tela = new Intent(this, TreinoCrucifixomasc.class);
+        startActivity(it_tela);}
+
 }

@@ -13,6 +13,33 @@
         android:theme="@style/Theme.PrimeiroAplicativo"
         tools:targetApi="31">
         <activity
+            android:name=".masctreino.TreinoAFinalizacaomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoTricepsDipmasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoTricepsPuleymasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoDesenMaquinamasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.ElevacaoLaretalHalteresmasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoSupinoRetomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoSupinoMaquinamasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoSupinoInclinadomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino.TreinoCrucifixomasc"
+            android:exported="false" />
+        <activity
             android:name=".TreinoCfeminino"
             android:exported="false" />
         <activity

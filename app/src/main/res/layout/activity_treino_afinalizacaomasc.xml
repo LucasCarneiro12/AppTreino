@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#335571"
+    tools:context=".masctreino.TreinoAFinalizacaomasc">
+
+    <ImageView
+        android:id="@+id/gif_arnoldpeito"
+        android:layout_width="407dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="32dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:srcCompat="@drawable/arnoldopeitoral" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="404dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Parabéns, Maronbeiro!!"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gif_arnoldpeito" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="404dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Treino concluído"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logosemfundo" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="177dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="abrirHome"
+        android:text="Voltar para o início"
+        android:textColor="#FFFFFF"
+        app:icon="@drawable/ic_home_24_white"
+        app:iconGravity="top"
+        app:iconSize="40dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+</androidx.constraintlayout.widget.ConstraintLayout>
