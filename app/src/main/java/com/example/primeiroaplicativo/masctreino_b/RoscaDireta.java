@@ -1,4 +1,4 @@
-package com.example.primeiroaplicativo.masctreino;
+package com.example.primeiroaplicativo.masctreino_b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,16 +14,16 @@ import androidx.core.view.WindowInsetsCompat;
 import com.bumptech.glide.Glide;
 import com.example.primeiroaplicativo.R;
 
-public class TreinoDesenMaquinamasc extends AppCompatActivity {
+public class RoscaDireta extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_treino_desen_maquinamasc);
+        setContentView(R.layout.activity_rosca_direta);
 
-        ImageView desenmaquina = findViewById(R.id.gif_desenmaquina);
-        Glide.with(this).asGif().load(R.drawable.desenvolvimentomaquina).into(desenmaquina);
+        ImageView roscadireta= findViewById(R.id.gif_roscadireta);
+        Glide.with(this).asGif().load(R.drawable.roscadireta).into(roscadireta);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -33,10 +33,10 @@ public class TreinoDesenMaquinamasc extends AppCompatActivity {
     }
 
     public void abrirAnterior(View view){
-        Intent it_tela = new Intent(this, ElevacaoLaretalHalteresmasc.class);
+        Intent it_tela = new Intent(this, RemadaBarra.class);
         startActivity(it_tela);}
 
-    public void abrirProximo(View view){
-        Intent it_tela = new Intent(this, TreinoTricepsPuleymasc.class);
+   public void abrirProximo(View view){
+        Intent it_tela = new Intent(this, RoscaScott.class);
         startActivity(it_tela);}
 }

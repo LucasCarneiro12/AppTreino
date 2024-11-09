@@ -26,7 +26,109 @@
         android:text="Masculino C"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/gif_hack"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/hack" />
+
+    <ImageView
+        android:id="@+id/gif_legpress"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_hack"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toEndOf="@+id/gif_hack"
+        app:layout_constraintTop_toTopOf="@+id/gif_hack"
+        app:srcCompat="@drawable/legpress" />
+
+    <ImageView
+        android:id="@+id/gif_cadeiraextensora"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/gif_hack"
+        app:srcCompat="@drawable/cardeiraextensora" />
+
+    <ImageView
+        android:id="@+id/gif_cadeiraflexora"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_cadeiraextensora"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toEndOf="@+id/gif_cadeiraextensora"
+        app:layout_constraintTop_toTopOf="@+id/gif_cadeiraextensora"
+        app:srcCompat="@drawable/cadeiraflexora" />
+
+    <ImageView
+        android:id="@+id/gif_mesaflexora"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/gif_cadeiraextensora"
+        app:srcCompat="@drawable/mesaflexora" />
+
+    <ImageView
+        android:id="@+id/gif_stiff"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_mesaflexora"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toEndOf="@+id/gif_mesaflexora"
+        app:layout_constraintTop_toTopOf="@+id/gif_mesaflexora"
+        app:srcCompat="@drawable/stif" />
+
+    <ImageView
+        android:id="@+id/gif_panturrilhamaq"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/gif_mesaflexora"
+        app:srcCompat="@drawable/panturrilhamaquina" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:text="Iniciar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_play_circle_24"
+        app:iconGravity="top"
+        app:iconSize="35dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toBottomOf="@+id/gif_panturrilhamaq"
+        app:layout_constraintVertical_bias="0.941" />
 </androidx.constraintlayout.widget.ConstraintLayout>

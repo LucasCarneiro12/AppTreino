@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
-import com.example.primeiroaplicativo.masctreino.TreinoCrucifixomasc;
+import com.example.primeiroaplicativo.masctreino_a.TreinoCrucifixomasc;
 
 public class TreinoA extends AppCompatActivity {
 
@@ -50,7 +50,7 @@ public class TreinoA extends AppCompatActivity {
 
 
         //tricepsdip
-        ImageView tricepsdip = findViewById(R.id.gif_tricepsdip);
+        ImageView tricepsdip = findViewById(R.id.gif_puxador);
         Glide.with(this).asGif().load(R.drawable.tricepsdip).into(tricepsdip);
 
 

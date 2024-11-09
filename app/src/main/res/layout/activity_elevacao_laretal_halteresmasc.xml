@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#335571"
-    tools:context=".masctreino.ElevacaoLaretalHalteresmasc">
+    tools:context=".masctreino_a.ElevacaoLaretalHalteresmasc">
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"

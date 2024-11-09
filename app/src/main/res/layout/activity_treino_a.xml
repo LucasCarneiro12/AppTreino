@@ -26,7 +26,7 @@
         android:text="Masculino A"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,9 +34,8 @@
         android:id="@+id/gif_crucifixo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
         app:srcCompat="@drawable/crucifixo_reto" />
 
@@ -45,9 +44,8 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/gif_crucifixo"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toEndOf="@+id/gif_crucifixo"
         app:layout_constraintTop_toTopOf="@+id/gif_crucifixo"
         app:layout_constraintVertical_bias="0.0"
@@ -57,9 +55,8 @@
         android:id="@+id/gif_supinomaquina"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/gif_crucifixo"
         app:srcCompat="@drawable/supinomaquina" />
 
@@ -67,10 +64,9 @@
         android:id="@+id/gif_supinoreto"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/gif_supinomaquina"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toEndOf="@+id/gif_supinomaquina"
         app:layout_constraintTop_toTopOf="@+id/gif_supinomaquina"
         app:layout_constraintVertical_bias="0.0"
@@ -80,9 +76,8 @@
         android:id="@+id/gif_elevacaolateral"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/gif_supinomaquina"
         app:srcCompat="@drawable/elevacaolateral" />
 
@@ -90,11 +85,9 @@
         android:id="@+id/gif_desenvolvimentomaquina"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/gif_elevacaolateral"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toEndOf="@+id/gif_elevacaolateral"
         app:layout_constraintTop_toTopOf="@+id/gif_elevacaolateral"
         app:srcCompat="@drawable/desenvolvimentomaquina" />
@@ -103,20 +96,18 @@
         android:id="@+id/gif_tricepspuley"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/gif_elevacaolateral"
         app:srcCompat="@drawable/tricepspuley" />
 
     <ImageView
-        android:id="@+id/gif_tricepsdip"
+        android:id="@+id/gif_puxador"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/gif_tricepspuley"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toEndOf="@+id/gif_tricepspuley"
         app:layout_constraintTop_toTopOf="@+id/gif_tricepspuley"
         app:srcCompat="@drawable/tricepsdip" />
@@ -125,9 +116,7 @@
         android:id="@+id/btn_play_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginBottom="2dp"
         android:background="@android:color/transparent"
         android:onClick="abrirIniciar"
@@ -140,8 +129,22 @@
         app:iconSize="35dp"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/gif_tricepspuley" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

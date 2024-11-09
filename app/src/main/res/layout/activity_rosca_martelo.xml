@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#335571"
-    tools:context=".masctreino_a.TreinoSupinoMaquinamasc">
-
+    tools:context=".masctreino_b.RoscaMartelo">
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
@@ -32,12 +31,12 @@
         android:layout_height="53dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="Supino máquina"
+        android:text="Rosca Martelo"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gif_supinomaquina" />
+        app:layout_constraintTop_toBottomOf="@+id/gif_roscamartelo" />
 
     <TextView
         android:id="@+id/textView11"
@@ -45,7 +44,7 @@
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="3 x 12"
+        android:text="4 x 12"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,15 +70,15 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/gif_supinomaquina"
+        android:id="@+id/gif_roscamartelo"
         android:layout_width="402dp"
         android:layout_height="400dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
+        android:src="@drawable/roscamartelo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/supinomaquina" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

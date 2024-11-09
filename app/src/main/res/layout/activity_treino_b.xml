@@ -26,7 +26,116 @@
         android:text="Masculino B"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="@android:color/transparent"
+        android:onClick="Inicar"
+        android:text="Iniciar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_play_circle_24"
+        app:iconGravity="top"
+        app:iconSize="35dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/gif_roscamartelo" />
+
+    <ImageView
+        android:id="@+id/gif_remandahalteres"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/remadacurvadacomhalters" />
+
+    <ImageView
+        android:id="@+id/gif_remandamaquina"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_remandahalteres"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/gif_remandahalteres"
+        app:layout_constraintTop_toTopOf="@+id/gif_remandahalteres"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/remadamaquina" />
+
+    <ImageView
+        android:id="@+id/gif_puxador"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/gif_remandahalteres"
+        app:srcCompat="@drawable/puxador" />
+
+    <ImageView
+        android:id="@+id/gif_remadabarra"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_puxador"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/gif_puxador"
+        app:layout_constraintTop_toTopOf="@+id/gif_puxador"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/remadacurvadacombarra" />
+
+    <ImageView
+        android:id="@+id/gif_roscadireta"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/gif_puxador"
+        app:srcCompat="@drawable/roscadireta" />
+
+    <ImageView
+        android:id="@+id/gif_roscascott"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gif_roscadireta"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/gif_roscadireta"
+        app:layout_constraintTop_toTopOf="@+id/gif_roscadireta"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/roscascott" />
+
+    <ImageView
+        android:id="@+id/gif_roscamartelo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toBottomOf="@+id/gif_roscadireta"
+        app:srcCompat="@drawable/roscamartelo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

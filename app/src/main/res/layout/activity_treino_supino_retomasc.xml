@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#335571"
-    tools:context=".masctreino.TreinoSupinoRetomasc">
+    tools:context=".masctreino_a.TreinoSupinoRetomasc">
 
     <Button
         android:id="@+id/button3"

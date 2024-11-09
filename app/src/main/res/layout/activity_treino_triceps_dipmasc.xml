@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#335571"
-    tools:context=".masctreino.TreinoTricepsDipmasc">
+    tools:context=".masctreino_a.TreinoTricepsDipmasc">
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gif_tricepsdip" />
+        app:layout_constraintTop_toBottomOf="@+id/gif_puxador" />
 
     <TextView
         android:id="@+id/textView11"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/gif_tricepsdip"
+        android:id="@+id/gif_puxador"
         android:layout_width="402dp"
         android:layout_height="400dp"
         android:layout_marginStart="1dp"

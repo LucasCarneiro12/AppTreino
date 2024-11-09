@@ -1,4 +1,4 @@
-package com.example.primeiroaplicativo.masctreino;
+package com.example.primeiroaplicativo.masctreino_b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,19 +12,18 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
-import com.example.primeiroaplicativo.MainActivity;
 import com.example.primeiroaplicativo.R;
 
-public class TreinoAFinalizacaomasc extends AppCompatActivity {
+public class Puxador extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_treino_afinalizacaomasc);
+        setContentView(R.layout.activity_puxador);
 
-        ImageView arnoldpeito = findViewById(R.id.gif_arnoldpeito);
-        Glide.with(this).asGif().load(R.drawable.arnoldopeitoral).into(arnoldpeito);
+        ImageView puxador = findViewById(R.id.gif_puxador);
+        Glide.with(this).asGif().load(R.drawable.puxador).into(puxador);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -33,7 +32,11 @@ public class TreinoAFinalizacaomasc extends AppCompatActivity {
         });
     }
 
-    public void abrirHome(View view){
-        Intent it_tela = new Intent(this, MainActivity.class);
+    public void abrirAnterior(View view){
+        Intent it_tela = new Intent(this, RemadaMaquina.class);
+        startActivity(it_tela);}
+
+    public void abrirProximo(View view){
+        Intent it_tela = new Intent(this, RemadaBarra.class);
         startActivity(it_tela);}
 }

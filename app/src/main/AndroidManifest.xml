@@ -13,31 +13,55 @@
         android:theme="@style/Theme.PrimeiroAplicativo"
         tools:targetApi="31">
         <activity
-            android:name=".masctreino.TreinoAFinalizacaomasc"
+            android:name=".masctreino_b.TreinoBFinalizacaomasc"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoTricepsDipmasc"
+            android:name=".masctreino_b.RoscaMartelo"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoTricepsPuleymasc"
+            android:name=".masctreino_b.RoscaScott"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoDesenMaquinamasc"
+            android:name=".masctreino_b.RoscaDireta"
             android:exported="false" />
         <activity
-            android:name=".masctreino.ElevacaoLaretalHalteresmasc"
+            android:name=".masctreino_b.RemadaBarra"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoSupinoRetomasc"
+            android:name=".masctreino_b.Puxador"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoSupinoMaquinamasc"
+            android:name=".masctreino_b.RemadaMaquina"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoSupinoInclinadomasc"
+            android:name=".masctreino_b.RemadaHalteresmas"
             android:exported="false" />
         <activity
-            android:name=".masctreino.TreinoCrucifixomasc"
+            android:name=".masctreino_a.TreinoAFinalizacaomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoTricepsDipmasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoTricepsPuleymasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoDesenMaquinamasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.ElevacaoLaretalHalteresmasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoSupinoRetomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoSupinoMaquinamasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoSupinoInclinadomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_a.TreinoCrucifixomasc"
             android:exported="false" />
         <activity
             android:name=".TreinoCfeminino"

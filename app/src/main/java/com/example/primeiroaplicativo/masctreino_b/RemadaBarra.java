@@ -1,4 +1,4 @@
-package com.example.primeiroaplicativo.masctreino;
+package com.example.primeiroaplicativo.masctreino_b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,19 +13,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.example.primeiroaplicativo.R;
-import com.example.primeiroaplicativo.TreinoA;
 
-public class TreinoCrucifixomasc extends AppCompatActivity {
+public class RemadaBarra extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_treino_crucifixomasc);
+        setContentView(R.layout.activity_remada_barra);
 
-        ImageView  crucifixo = findViewById(R.id.gif_crucifixo);
-        Glide.with(this).asGif().load(R.drawable.crucifixo_reto).into(crucifixo);
-
+        ImageView remadabarra = findViewById(R.id.gif_remadabarra);
+        Glide.with(this).asGif().load(R.drawable.remadacurvadacombarra).into(remadabarra);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -35,10 +33,10 @@ public class TreinoCrucifixomasc extends AppCompatActivity {
     }
 
     public void abrirAnterior(View view){
-        Intent it_tela = new Intent(this, TreinoA.class);
+        Intent it_tela = new Intent(this, Puxador.class);
         startActivity(it_tela);}
 
-    public void abrirProximo(View view){
-        Intent it_tela = new Intent(this, TreinoSupinoInclinadomasc.class);
+   public void abrirProximo(View view){
+        Intent it_tela = new Intent(this, RoscaDireta.class);
         startActivity(it_tela);}
 }

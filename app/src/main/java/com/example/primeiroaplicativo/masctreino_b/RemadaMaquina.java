@@ -1,4 +1,4 @@
-package com.example.primeiroaplicativo.masctreino;
+package com.example.primeiroaplicativo.masctreino_b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,17 +13,21 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.example.primeiroaplicativo.R;
+import com.example.primeiroaplicativo.TreinoB;
 
-public class TreinoSupinoRetomasc extends AppCompatActivity {
+public class RemadaMaquina extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_treino_supino_retomasc);
+        setContentView(R.layout.activity_remada_maquina);
 
-        ImageView supinoreto = findViewById(R.id.gif_supinoreto);
-        Glide.with(this).asGif().load(R.drawable.supino_reto).into(supinoreto);
+
+        //gif_remadamaquina
+        ImageView remadamaquina = findViewById(R.id.gif_remadamaquina);
+        Glide.with(this).asGif().load(R.drawable.remadamaquina).into(remadamaquina);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -31,11 +35,12 @@ public class TreinoSupinoRetomasc extends AppCompatActivity {
             return insets;
         });
     }
+
     public void abrirAnterior(View view){
-        Intent it_tela = new Intent(this, TreinoSupinoMaquinamasc.class);
+        Intent it_tela = new Intent(this, RemadaHalteresmas.class);
         startActivity(it_tela);}
 
-    public void abrirProximo(View view){
-        Intent it_tela = new Intent(this, ElevacaoLaretalHalteresmasc.class);
+   public void abrirProximo(View view){
+        Intent it_tela = new Intent(this, Puxador.class);
         startActivity(it_tela);}
 }
