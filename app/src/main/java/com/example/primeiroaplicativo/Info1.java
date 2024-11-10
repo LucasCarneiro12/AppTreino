@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,9 +17,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class Info1 extends AppCompatActivity {
 
 
-    private EditText editPeso, editAltura;
-    private TextView textResultado;
-
+    private EditText editPeso, editAltura, editIdade;
+    private TextView textResultado, textResultadoTMB;
+    private CheckBox checkBoxMasculino;
+    private CheckBox checkBoxFeminino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,20 @@ public class Info1 extends AppCompatActivity {
 
         editPeso = findViewById(R.id.editPeso);
         editAltura = findViewById(R.id.editAltura);
+        editIdade = findViewById(R.id.editIdade);
         textResultado = findViewById(R.id.textResultado);
+        checkBoxMasculino = findViewById(R.id.checkBoxMasculino);
+        checkBoxFeminino = findViewById(R.id.checkBoxFeminino);
+        textResultadoTMB = findViewById(R.id.textResultadoTMB);
+
+        // Controla os CheckBox para que apenas um seja selecionado
+        checkBoxMasculino.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) checkBoxFeminino.setChecked(false);
+        });
+        checkBoxFeminino.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) checkBoxMasculino.setChecked(false);
+        });
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -41,8 +56,10 @@ public class Info1 extends AppCompatActivity {
 
         double peso = Double.parseDouble(editPeso.getText().toString());
         double altura = Double.parseDouble(editAltura.getText().toString());
+        double idade = Double.parseDouble(editIdade.getText().toString());
 
-        double imc = peso / (altura * altura);
+        // IMC
+        double imc = peso / ((altura/100) * (altura/100));
         /*IMC == peso / altura * altura*/
         String imcFormatado = String.format("%.2f", imc);
 
@@ -65,7 +82,42 @@ public class Info1 extends AppCompatActivity {
             textResultado.setText("Abaixo do peso. IMC= "+imcFormatado);
         }
 
+        // TMB
+
+        String pesoStr = editPeso.getText().toString();
+        String alturaStr = editAltura.getText().toString();
+        String idadeStr = editIdade.getText().toString();
+
+        // Verifica se os campos estão preenchidos
+        if (pesoStr.isEmpty() || alturaStr.isEmpty() || idadeStr.isEmpty()) {
+            textResultadoTMB.setText("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        // Converte os valores para double/int
+        /*double peso = Double.parseDouble(pesoStr);
+        double altura = Double.parseDouble(alturaStr);
+        int idade = Integer.parseInt(idadeStr);*/
+
+        double tmb;
+
+        if (checkBoxMasculino.isChecked()) {
+            // Calcula TMB para homens
+            tmb = 88.36 + (13.4 * peso) + (4.8 * altura) - (5.7 * idade);
+        } else if (checkBoxFeminino.isChecked()) {
+            // Calcula TMB para mulheres
+            tmb = 447.6 + (9.2 * peso) + (3.1 * altura) - (4.3 * idade);
+        } else {
+            // Caso nenhum sexo tenha sido selecionado
+            textResultadoTMB.setText("Selecione um sexo.");
+            return;
+        }
+
+        // Exibe o resultado formatado com duas casas decimais
+        String resultado = String.format("Sua TMB é: %.2f kcal/dia", tmb);
+        textResultadoTMB.setText(resultado);
     }
+
 
 
 
@@ -78,5 +130,7 @@ public class Info1 extends AppCompatActivity {
         Intent it_telaHome = new Intent(this, MainActivity.class);
         startActivity(it_telaHome);
     }
+
+
 
 }
