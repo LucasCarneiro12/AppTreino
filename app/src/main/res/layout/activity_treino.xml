@@ -63,6 +63,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/custonmbtn"
         android:drawableTop="@drawable/ic_info_24_white"
+        android:onClick="abrirTelaInfo"
         android:text="Info"
         android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"

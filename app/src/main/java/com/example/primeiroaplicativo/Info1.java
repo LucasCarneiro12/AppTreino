@@ -21,6 +21,8 @@ public class Info1 extends AppCompatActivity {
     private TextView textResultado, textResultadoTMB;
     private CheckBox checkBoxMasculino;
     private CheckBox checkBoxFeminino;
+    private CheckBox checkBoxSedentario, checkBoxLeve, checkBoxModerado;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +37,12 @@ public class Info1 extends AppCompatActivity {
         checkBoxMasculino = findViewById(R.id.checkBoxMasculino);
         checkBoxFeminino = findViewById(R.id.checkBoxFeminino);
         textResultadoTMB = findViewById(R.id.textResultadoTMB);
+        checkBoxSedentario = findViewById(R.id.checkBoxSedentario);
+        checkBoxLeve = findViewById(R.id.checkBoxLeve);
+        checkBoxModerado = findViewById(R.id.checkBoxModerado);
 
-        // Controla os CheckBox para que apenas um seja selecionado
+
+        // Controla os CheckBox masculino e feminino para que apenas um seja selecionado
         checkBoxMasculino.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) checkBoxFeminino.setChecked(false);
         });
@@ -44,6 +50,19 @@ public class Info1 extends AppCompatActivity {
             if (isChecked) checkBoxMasculino.setChecked(false);
         });
 
+        //Controla os CheckBox de niveis de atv para que apenas um seja selecionado
+        checkBoxSedentario.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) checkBoxLeve.setChecked(false);
+            if (isChecked) checkBoxModerado.setChecked(false);
+        });
+        checkBoxLeve.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) checkBoxSedentario.setChecked(false);
+            if (isChecked) checkBoxModerado.setChecked(false);
+        });
+        checkBoxModerado.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) checkBoxLeve.setChecked(false);
+            if (isChecked) checkBoxSedentario.setChecked(false);
+        });
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -104,9 +123,35 @@ public class Info1 extends AppCompatActivity {
         if (checkBoxMasculino.isChecked()) {
             // Calcula TMB para homens
             tmb = 88.36 + (13.4 * peso) + (4.8 * altura) - (5.7 * idade);
+            //multiplica pelo nivel de atv fisica
+            if(checkBoxSedentario.isChecked()){
+                tmb = tmb * 1.2;
+            }
+            else if(checkBoxLeve.isChecked()){
+                tmb = tmb * 1.3;
+            }
+            else if(checkBoxModerado.isChecked()){
+                tmb = tmb * 1.5;
+            }
+            else { tmb = tmb * 1;}
+
+
         } else if (checkBoxFeminino.isChecked()) {
             // Calcula TMB para mulheres
             tmb = 447.6 + (9.2 * peso) + (3.1 * altura) - (4.3 * idade);
+
+            //multiplica pelo nivel de atv fisica
+            if(checkBoxSedentario.isChecked()){
+                tmb = tmb * 1.2;
+            }
+            else if(checkBoxLeve.isChecked()){
+                tmb = tmb * 1.3;
+            }
+            else if(checkBoxModerado.isChecked()){
+                tmb = tmb * 1.5;
+            }
+            else { tmb = tmb * 1;}
+
         } else {
             // Caso nenhum sexo tenha sido selecionado
             textResultadoTMB.setText("Selecione um sexo.");

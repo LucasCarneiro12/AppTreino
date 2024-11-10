@@ -12,7 +12,7 @@
         android:id="@+id/textInputLayout"
         android:layout_width="300dp"
         android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         android:id="@+id/textInputLayout2"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
@@ -55,8 +55,7 @@
     <TextView
         android:id="@+id/textResultado"
         android:layout_width="370dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="40dp"
         android:gravity="center"
         android:text="Índice de Massa Corporal"
         android:textColor="#FFFFFF"
@@ -70,13 +69,13 @@
         android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="2dp"
         android:onClick="calcular"
         android:text="Calcular"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxMasculino" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxModerado" />
 
     <ImageView
         android:id="@+id/imageView20"
@@ -141,7 +140,7 @@
         android:id="@+id/textInputLayout3"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
@@ -162,8 +161,8 @@
         android:id="@+id/checkBoxMasculino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
         android:text="Masculino"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
@@ -176,19 +175,22 @@
         android:id="@+id/checkBoxFeminino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
         android:text="Feminino"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/checkBoxMasculino"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/checkBoxMasculino"
-        app:layout_constraintTop_toTopOf="@+id/checkBoxMasculino" />
+        app:layout_constraintTop_toTopOf="@+id/checkBoxMasculino"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textResultadoTMB"
         android:layout_width="370dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Taxa Metabólica Basal"
@@ -234,7 +236,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
         android:onClick="caixaImc"
         android:text="IMC?"
         android:textColor="#FFFFFF"
@@ -243,7 +246,60 @@
         app:iconGravity="end"
         app:iconTint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
-        android:background="@android:color/transparent"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="189dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:text="Níveil de atividade física"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxMasculino" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSedentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Sedentário"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLeve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="52dp"
+        android:text="Leve(1 a 3 vezes por semana)"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxSedentario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSedentario"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxSedentario"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBoxModerado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="Moderado(Mais de 3 vezes por semana)"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxSedentario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

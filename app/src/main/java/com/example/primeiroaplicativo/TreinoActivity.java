@@ -38,6 +38,10 @@ public class TreinoActivity extends AppCompatActivity {
         Intent it_telaHome = new Intent(this, CadastroActivity.class);
         startActivity(it_telaHome);}
 
+    public void abrirTelaInfo(View view){
+        Intent it_tela = new Intent(this, Info1.class);
+        startActivity(it_tela);}
+
     public void abrirTreinoAMasc(View view){
         Intent it_telaHome = new Intent(this, TreinoA.class);
         startActivity(it_telaHome);}
