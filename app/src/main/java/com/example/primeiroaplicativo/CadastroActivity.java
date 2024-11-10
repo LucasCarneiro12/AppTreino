@@ -48,12 +48,48 @@ public class CadastroActivity extends AppCompatActivity {
             }
         }
 
-        btnSalvar.setOnClickListener(new View.OnClickListener() {
+      /*  btnSalvar.setOnClickListener(view -> {
+            // Verifica se os dados estão preenchidos corretamente
+            String altura = etAltura.getText().toString();
+            String peso = etPeso.getText().toString();
+            String idade = etIdade.getText().toString();
+            String nome = etNome.getText().toString();
+            String diasSemana = etDiasSemana.getText().toString();
+
+
+
+            if (altura.isEmpty() || peso.isEmpty() ||diasSemana.isEmpty() || idade.isEmpty()) {
+                Toast.makeText(this, "Preencha todos os dados!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+
+            // Salva os dados no SharedPreferences
+            SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("nome", nome);
+            editor.putString("altura", altura);
+            editor.putString("peso", peso);
+            editor.putString("idade", idade);
+            editor.putString("Dias da Semana", diasSemana);
+            editor.putString("sexo", sexo);
+
+            editor.putBoolean("isUserDataComplete", true);
+            editor.apply();
+
+            // Redireciona para a home
+            Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+
+        });*/
+
+        /*btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 salvarDados();
             }
-        });
+        });*/
 
             ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -61,8 +97,45 @@ public class CadastroActivity extends AppCompatActivity {
             return insets;
         });
     }
-
+/*
     private void salvarDados() {
+        // Verifica se os dados estão preenchidos corretamente
+        String altura = etAltura.getText().toString();
+        String peso = etPeso.getText().toString();
+        String idade = etIdade.getText().toString();
+        String nome = etNome.getText().toString();
+        String diasSemana = etDiasSemana.getText().toString();
+
+
+
+        if (altura.isEmpty() || peso.isEmpty() ||diasSemana.isEmpty() || idade.isEmpty()) {
+            Toast.makeText(this, "Preencha todos os dados!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
+        // Salva os dados no SharedPreferences
+        SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("nome", nome);
+        editor.putString("altura", altura);
+        editor.putString("peso", peso);
+        editor.putString("idade", idade);
+        editor.putString("Dias da Semana", diasSemana);
+        editor.putString("sexo", sexo);
+
+        editor.putBoolean("isUserDataComplete", true);
+        editor.apply();
+
+        // Redireciona para a home
+        Intent intent = new Intent(CadastroActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+
+
+    }*/
+
+    public void salvarInfo(View v){
         // Verifica se os dados estão preenchidos corretamente
         String altura = etAltura.getText().toString();
         String peso = etPeso.getText().toString();

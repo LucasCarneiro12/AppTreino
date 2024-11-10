@@ -3,9 +3,7 @@ package com.example.primeiroaplicativo;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tvNome, tvOla, textView;
+    private TextView tvNome, tv_saudacao, textView;
     private Button btnHome, btnTreino, btnPerfil, btnInfo;
    // private ImageView imgMascHome;
 
@@ -30,9 +28,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
 
+        tv_saudacao = findViewById(R.id.tv_saudacao);
         // Recupera as preferências
         SharedPreferences preferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+
+        String nome = preferences.getString("nome", "nome não definido");
+
+
+        tv_saudacao.setText("Olá, " + nome + "!");
 
         // Verifica se os dados estão preenchidos
         boolean isUserDataComplete = preferences.getBoolean("isUserDataComplete", false);
@@ -44,13 +50,12 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
-        String nome = sharedPreferences.getString("nome", "nome não definido");
+       // SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+
+       // setContentView(R.layout.activity_main);
 
 
-        setContentView(R.layout.activity_main);
-        tvOla = findViewById(R.id.tvOla);
-        //textView = findViewById(R.id.textView);
+
 
         /*if(tvNome != null){
 
@@ -83,16 +88,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
+
+    public void abrirTelainfo(View v){
+        Intent it_tela = new Intent(this, Info1.class);
+        startActivity(it_tela);}
 
     public void abrirTelaCadastro(View v){
         Intent it_telaCadastro = new Intent(this, CadastroActivity.class);
@@ -113,4 +118,6 @@ public class MainActivity extends AppCompatActivity {
     public void abrirTelaTreinoMasc(View v){
         Intent it_telaTreino = new Intent(this, AbcMasculino.class);
         startActivity(it_telaTreino);}
+
+
 }
