@@ -13,6 +13,33 @@
         android:theme="@style/Theme.PrimeiroAplicativo"
         tools:targetApi="31">
         <activity
+            android:name=".AbcMasculino"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.TreinoCFinalizacaomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.PanturrilhaSentadomasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.StiffMasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.MesaFlexoramasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.CadeiraFlexoramasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.CadeiraExtensoramasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.LegpressMasc"
+            android:exported="false" />
+        <activity
+            android:name=".masctreino_c.HackMasc"
+            android:exported="false" />
+        <activity
             android:name=".masctreino_b.TreinoBFinalizacaomasc"
             android:exported="false" />
         <activity

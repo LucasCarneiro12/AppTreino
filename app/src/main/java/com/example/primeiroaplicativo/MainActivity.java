@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
     public void abrirTelaHome(View view){
         Intent it_telaHome = new Intent(this, MainActivity.class);
         startActivity(it_telaHome);
-
     }
+
+    public void abrirTelaTreinoMasc(View v){
+        Intent it_telaTreino = new Intent(this, AbcMasculino.class);
+        startActivity(it_telaTreino);}
 }

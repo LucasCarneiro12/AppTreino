@@ -1,6 +1,8 @@
 package com.example.primeiroaplicativo;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
+import com.example.primeiroaplicativo.masctreino_b.RemadaHalteresmas;
+import com.example.primeiroaplicativo.masctreino_c.HackMasc;
 
 public class TreinoC extends AppCompatActivity {
 
@@ -55,4 +59,7 @@ public class TreinoC extends AppCompatActivity {
             return insets;
         });
     }
+    public void Inicar(View view){
+        Intent it_tela = new Intent(this, HackMasc.class);
+        startActivity(it_tela);}
 }
