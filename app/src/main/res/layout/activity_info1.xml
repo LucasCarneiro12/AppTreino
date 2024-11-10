@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20">
+        app:layout_constraintTop_toBottomOf="@+id/button18">
 
         <EditText
             android:id="@+id/editPeso"
@@ -189,10 +189,12 @@
         android:layout_width="370dp"
         android:layout_height="58dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Taxa Metabólica Basal"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTreino"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textResultado" />
@@ -208,5 +210,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView20"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:onClick="caixaTmb"
+        android:text="TMB?"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_info_24_white"
+        app:iconGravity="end"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/button18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button18"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@android:color/transparent"/>
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:onClick="caixaImc"
+        android:text="IMC?"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:icon="@drawable/ic_info_24_white"
+        app:iconGravity="end"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        android:background="@android:color/transparent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

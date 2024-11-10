@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.app.AlertDialog;
 public class Info1 extends AppCompatActivity {
 
 
@@ -129,6 +129,25 @@ public class Info1 extends AppCompatActivity {
     public void abrirTelaHome(View view){
         Intent it_telaHome = new Intent(this, MainActivity.class);
         startActivity(it_telaHome);
+    }
+
+    public void caixaImc(View view){
+        AlertDialog.Builder cxImc = new AlertDialog.Builder(this);
+        cxImc.setMessage("O Índice de Massa Corporal (IMC)" +
+                " é uma das principais ferramentas, adotada inclusive pela Organização Mundial de Saúde (OMS)," +
+                " para calcular o chamado “peso ideal”.O IMC também aponta níveis de magreza e obesidade");
+        cxImc.setNegativeButton("ok", null);
+        cxImc.show();
+    }
+
+    public void caixaTmb(View view){
+        AlertDialog.Builder cxTmb = new AlertDialog.Builder(this);
+        cxTmb.setMessage("A taxa metabólica basal (TMB) é a quantidade aproximada de energia necessária" +
+                " para a manutenção das funções vitais do organismo ao longo de 24 horas. " +
+                "Ela é medida em calorias, que é a energia extraída pelo nosso corpo " +
+                "a partir dos macronutrientes (carboidratos, proteínas e gorduras totais).");
+        cxTmb.setNegativeButton("ok", null);
+        cxTmb.show();
     }
 
 
